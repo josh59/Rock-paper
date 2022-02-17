@@ -37,15 +37,28 @@
                     }else if((playerSelection == 'rock' || playerSelection == 'Rock' || playerSelection == 'ROCK')&& computerSelection == 'Scissors'){
 
                         return "You win, rock beats scissors";
-                    }else{ return "Sorry, but it's a tie baby."}
+                    }
+
+                    else if((playerSelection == 'paper' || playerSelection=='Paper' || playerSelection == 'PAPER') && computerSelection == 'Paper'){
+                        return "Sorry, but it's a tie baby.";
+                    }
+                    else if( (playerSelection == 'scissors' || playerSelection == 'Scissors' || playerSelection == 'SCISSORS') && computerSelection == 'Scissors'){
+                        return "Sorry, but it's a tie baby.";
+                    }
+                    else if((playerSelection == 'rock' || playerSelection == 'Rock' || playerSelection == 'ROCK')&& computerSelection == 'Rock'){
+
+                        return "Sorry, but it's a tie baby.";
+                    }               
+                    
+            
+                    else{ return "Lose! C'mon man, you can spell better than that..."}
                 }
                 /*console.log(gamePlay('rock'));*/
                 function game(){
                     for (i =1;i<=5; i++){
                         let input = prompt("Choose your fighter!");
                         console.log(gamePlay(input));
-                    }
-
+                    }  
                 }
                 game();
             </script>
