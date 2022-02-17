@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>
+            Rock_paper
+        </title>
+        <body>
+            <script>
+                function computerPlay(){
+                    let int = Math.floor(Math.random() * 10);
+                    /*console.log(int);*/
+                    if (int <=3){
+                        return 'Rock';
+                    }else if (int <= 6 && int > 3){
+                        return 'Paper';
+                    }return 'Scissors';
+                }
+                
+                /*console.log(computerPlay());*/
+                function gamePlay(playerSelection){
+                    let computerSelection = computerPlay();
+                    console.log(computerSelection);
+                    if ((playerSelection == 'rock' || playerSelection=='Rock' || playerSelection == 'ROCK') && computerSelection == 'Paper'){
+                        return "You lose, paper beats rock!";
+
+                    }else if( (playerSelection == 'paper' || playerSelection == 'Paper' || playerSelection == 'PAPER') && computerSelection == 'Scissors'){
+                        return "You lose, Scissors beats paper!";
+                    }else if((playerSelection == 'scissors' || playerSelection == 'Scissors' || playerSelection == 'SCISSORS')&& computerSelection == 'Rock'){
+
+                        return "You lose, rock beats scissors";
+                    }
+                    else if((playerSelection == 'paper' || playerSelection=='Paper' || playerSelection == 'PAPER') && computerSelection == 'Rock'){
+                        return "You win, paper beats rock!";
+                    }else if( (playerSelection == 'scissors' || playerSelection == 'Scissors' || playerSelection == 'SCISSORS') && computerSelection == 'Paper'){
+                        return "You win, Scissors beats paper!";
+                    }else if((playerSelection == 'rock' || playerSelection == 'Rock' || playerSelection == 'ROCK')&& computerSelection == 'Scissors'){
+
+                        return "You win, rock beats scissors";
+                    }else{ return "Sorry, but it's a tie baby."}
+                }
+                console.log(gamePlay('rock'));
+            </script>
+        </body>
+    </head>
+</html>
